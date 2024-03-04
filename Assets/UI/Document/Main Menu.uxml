@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1; padding-top: 5%; padding-right: 5%; padding-bottom: 5%; padding-left: 5%;">
+        <ui:VisualElement name="TitleBox" style="flex-grow: 1; flex-shrink: 1; padding-top: 5%;">
+            <ui:Label tabindex="-1" text="Angle Bouncer" parse-escape-sequences="true" display-tooltip-when-elided="true" name="TitleLabel" style="-unity-text-align: upper-center; -unity-font-style: bold; font-size: 25%;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="ButtonsBox" style="flex-grow: 1; flex-shrink: 1; padding-left: 10%; padding-right: 10%;">
+            <ui:Button text="Start" parse-escape-sequences="true" display-tooltip-when-elided="true" name="StartButton" />
+            <ui:Button text="Options" parse-escape-sequences="true" display-tooltip-when-elided="true" name="OptionsButton" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
