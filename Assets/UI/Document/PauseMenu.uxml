@@ -1,0 +1,12 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1;">
+        <ui:VisualElement style="flex-grow: 1; flex-shrink: 1; padding-top: 5%; padding-right: 5%; padding-bottom: 5%; padding-left: 5%;">
+            <ui:Label tabindex="-1" text="Paused" parse-escape-sequences="true" display-tooltip-when-elided="true" name="PauseLabel" style="-unity-font-style: bold; -unity-text-align: upper-center; font-size: 24px;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; padding-top: 0; padding-right: 20%; padding-bottom: 0; padding-left: 20%;">
+            <ui:Button text="Continue" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ContinueButton" style="flex-shrink: 1;" />
+            <ui:Button text="Options" parse-escape-sequences="true" display-tooltip-when-elided="true" name="OptionsButton" style="flex-shrink: 1;" />
+            <ui:Button text="Main Menu" parse-escape-sequences="true" display-tooltip-when-elided="true" name="MainMenuButton" style="flex-shrink: 1;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
