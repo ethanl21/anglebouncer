@@ -27,9 +27,12 @@ public class LineGenerator : MonoBehaviour
             if (!isActive) return; // don't start a new line when clicking on UI elements
 
             GameObject newLine;
-            if (isAltLineType) {
+            if (isAltLineType)
+            {
                 newLine = Instantiate(altLinePrefab);
-            }else {
+            }
+            else
+            {
                 newLine = Instantiate(linePrefab);
             }
 
@@ -55,8 +58,18 @@ public class LineGenerator : MonoBehaviour
         if (lineStack.Count > 0)
         {
             Destroy(lineStack.Pop());
-        }else {
+        }
+        else
+        {
             Debug.Log("Cannot pop from empty stack");
+        }
+    }
+
+    public void DeleteAllLines()
+    {
+        while (lineStack.Count > 0)
+        {
+            UndoLine();
         }
     }
 }

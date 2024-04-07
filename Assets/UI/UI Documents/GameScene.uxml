@@ -1,6 +1,19 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/UI%20Documents/GameScene.uss?fileID=7433441132597879392&amp;guid=cac98d52c0779354aa7c5e2c6b2cbc23&amp;type=3#GameScene" />
     <ui:VisualElement name="outerContainer" style="flex-grow: 1;">
-        <ui:Button text="Undo" parse-escape-sequences="true" display-tooltip-when-elided="true" name="undoButton" />
+        <ui:VisualElement name="topContainer" style="flex-grow: 1; flex-direction: row; justify-content: flex-end; align-items: flex-start;">
+            <ui:Button text="Undo" parse-escape-sequences="true" display-tooltip-when-elided="true" name="undoButton" />
+            <ui:Button text="Restart" parse-escape-sequences="true" display-tooltip-when-elided="true" name="restartButton" />
+            <ui:Button text="Menu" parse-escape-sequences="true" display-tooltip-when-elided="true" name="menuButtom" />
+        </ui:VisualElement>
+        <ui:VisualElement name="bottomContainer" style="flex-grow: 1; flex-direction: row; justify-content: space-between;">
+            <ui:VisualElement name="linePickerButtonContainer" style="flex-grow: 1; flex-direction: row; align-items: flex-end;">
+                <ui:Button text="Normal" parse-escape-sequences="true" display-tooltip-when-elided="true" name="normalLineButton" style="height: 100px; width: 50px;" />
+                <ui:Button text="Alt" parse-escape-sequences="true" display-tooltip-when-elided="true" name="altLineButton" style="width: 50px; height: 100px;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="levelInfoContainer" style="flex-grow: 1; align-items: flex-end; justify-content: flex-end; margin-right: 0; padding-bottom: 10px; padding-right: 20px;">
+                <ui:Label tabindex="-1" text="Level 0" parse-escape-sequences="true" display-tooltip-when-elided="true" name="currentLevelLabel" style="font-size: 36px; -unity-font-style: bold; -unity-text-outline-color: rgba(255, 255, 255, 0); -unity-text-outline-width: 5px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

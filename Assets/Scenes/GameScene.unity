@@ -352,8 +352,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88080d1499136714eaaea49717766c35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  linePrefab: {fileID: 8369190365024646705, guid: 3121da715672bc4499068c328ea8d0be, type: 3}
+  linePrefab: {fileID: 6133457581479851429, guid: 6d27435966bef0e4a8d8089143648dff, type: 3}
+  altLinePrefab: {fileID: 8369190365024646705, guid: 3121da715672bc4499068c328ea8d0be, type: 3}
   isActive: 1
+  isAltLineType: 0
 --- !u!4 &890307156
 Transform:
   m_ObjectHideFlags: 0
