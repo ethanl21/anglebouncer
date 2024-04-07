@@ -1,0 +1,4 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/UI%20Documents/LevelSelect.uss?fileID=7433441132597879392&amp;guid=ad5fd559bbab2a44980f193ba3bcc36c&amp;type=3#LevelSelect" />
+    <ui:VisualElement name="outerContainer" style="flex-grow: 1; background-image: url(&apos;project://database/Assets/UI/BG/hex_grid.png?fileID=2800000&amp;guid=ec9cc57188ec1a741ad794ab65652ac7&amp;type=3#hex_grid&apos;); -unity-background-scale-mode: scale-and-crop;" />
+</ui:UXML>

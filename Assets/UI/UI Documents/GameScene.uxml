@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/UI%20Documents/GameScene.uss?fileID=7433441132597879392&amp;guid=cac98d52c0779354aa7c5e2c6b2cbc23&amp;type=3#GameScene" />
+    <ui:VisualElement name="outerContainer" style="flex-grow: 1;">
+        <ui:Button text="Undo" parse-escape-sequences="true" display-tooltip-when-elided="true" name="undoButton" />
+    </ui:VisualElement>
+</ui:UXML>
