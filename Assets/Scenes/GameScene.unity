@@ -322,6 +322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transitionSettings: {fileID: 11400000, guid: c9f7b34f761c5c342ada8a4b2ab7a716, type: 2}
+  lineGenerator: {fileID: 890307155}
 --- !u!1 &890307154
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,6 +353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   linePrefab: {fileID: 8369190365024646705, guid: 3121da715672bc4499068c328ea8d0be, type: 3}
+  isActive: 1
 --- !u!4 &890307156
 Transform:
   m_ObjectHideFlags: 0

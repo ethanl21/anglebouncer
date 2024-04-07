@@ -3,8 +3,8 @@
     <ui:VisualElement name="outerContainer" style="flex-grow: 1; background-image: url(&apos;project://database/Assets/UI/BG/graph_paper.png?fileID=2800000&amp;guid=98c90f59cd2095346a81b5d80c11a0c9&amp;type=3#graph_paper&apos;);">
         <ui:Label tabindex="-1" text="Options" parse-escape-sequences="true" display-tooltip-when-elided="true" name="pageTitleLabel" />
         <ui:VisualElement name="settingsContainer" style="flex-grow: 1; align-items: stretch;">
-            <ui:Slider picking-mode="Ignore" label="BGM Volume" value="42" high-value="100" name="bgmSlider" />
-            <ui:Slider picking-mode="Ignore" label="SE Volume" value="42" high-value="100" name="seSlider" />
+            <ui:Slider picking-mode="Ignore" label="BGM Volume" value="50" high-value="100" name="bgmSlider" low-value="0" />
+            <ui:Slider picking-mode="Ignore" label="SE Volume" value="50" high-value="100" name="seSlider" />
             <ui:VisualElement name="bottomButtonContainer" style="flex-grow: 1; flex-direction: row; align-items: center; justify-content: center;">
                 <ui:Button text="Discard Changes" parse-escape-sequences="true" display-tooltip-when-elided="true" name="discardChangesButton" />
                 <ui:Button text="Save Changes" parse-escape-sequences="true" display-tooltip-when-elided="true" name="saveChangesButton" />

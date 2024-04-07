@@ -277,6 +277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transitionSettings: {fileID: 11400000, guid: b0126e1e0c6c2a04895d564bd230dfb9, type: 2}
+  audioMixer: {fileID: 24100000, guid: 2477a8efd5e162a41a85d6792a5ea27b, type: 2}
 --- !u!1 &1359440484
 GameObject:
   m_ObjectHideFlags: 0
