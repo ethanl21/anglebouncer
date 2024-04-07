@@ -30,6 +30,7 @@ public class GameScene : MonoBehaviour
 
     void OnUndoButtonClicked(ClickEvent evt) {
         lineGenerator.UndoLine();
+        lineGenerator.isAltLineType = !lineGenerator.isAltLineType;
     }
 
     void OnUndoButtonMouseOver(MouseOverEvent evt) {

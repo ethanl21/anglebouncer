@@ -5,12 +5,15 @@ using UnityEngine;
 public class LineGenerator : MonoBehaviour
 {
     public GameObject linePrefab;
+    public GameObject altLinePrefab;
 
     Line activeLine;
 
     Stack<GameObject> lineStack;
 
     public bool isActive = true;
+
+    public bool isAltLineType = false;
 
     void Start()
     {
@@ -19,13 +22,17 @@ public class LineGenerator : MonoBehaviour
 
     void Update()
     {
-        
-
         if (Input.GetMouseButtonDown(0))
         {
             if (!isActive) return; // don't start a new line when clicking on UI elements
 
-            GameObject newLine = Instantiate(linePrefab);
+            GameObject newLine;
+            if (isAltLineType) {
+                newLine = Instantiate(altLinePrefab);
+            }else {
+                newLine = Instantiate(linePrefab);
+            }
+
             lineStack.Push(newLine);
 
             activeLine = newLine.GetComponent<Line>();
