@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using EasyTransition;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -11,7 +12,10 @@ public class MainMenu : MonoBehaviour
     private Button _optionsBtn;
     private Button _quitBtn;
 
-    private void Start() {
+    public TransitionSettings transitionSettings;
+
+    private void Start()
+    {
         // UI Toolkit document
         _document = GetComponent<UIDocument>();
 
@@ -24,15 +28,18 @@ public class MainMenu : MonoBehaviour
         _startBtn.RegisterCallback<ClickEvent>(OnStartButtonClick);
         _optionsBtn.RegisterCallback<ClickEvent>(OnOptionsButtonClick);
         _quitBtn.RegisterCallback<ClickEvent>(OnQuitButtonClick);
+
     }
 
-    private void OnStartButtonClick(ClickEvent evt) {
+    private void OnStartButtonClick(ClickEvent evt)
+    {
         Debug.Log("Clicked start button");
     }
 
     private void OnOptionsButtonClick(ClickEvent evt)
     {
         Debug.Log("Clicked options button");
+        TransitionManager.Instance().Transition("Scenes/OptionsMenu", transitionSettings, 0f);
     }
 
     private void OnQuitButtonClick(ClickEvent evt)

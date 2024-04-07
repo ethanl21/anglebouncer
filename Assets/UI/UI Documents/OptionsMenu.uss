@@ -1,0 +1,30 @@
+#pageTitleLabel {
+    -unity-text-align: upper-center;
+    font-size: 36px;
+}
+
+#settingsContainer {
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 244);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    margin-top: 50px;
+    margin-right: 100px;
+    margin-bottom: 50px;
+    margin-left: 100px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    border-left-color: rgb(190, 190, 190);
+    border-right-color: rgb(190, 190, 190);
+    border-top-color: rgb(190, 190, 190);
+    border-bottom-color: rgb(190, 190, 190);
+    border-top-width: 5px;
+    border-right-width: 5px;
+    border-bottom-width: 5px;
+    border-left-width: 5px;
+}
