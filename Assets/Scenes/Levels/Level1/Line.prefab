@@ -56,7 +56,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b43cec7408e33ae4e9737502a1bdb5d2, type: 2}
+  - {fileID: 2100000, guid: c48298cc87514b545a00660ebb8bee1a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -208,7 +208,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 66b346f2d1a74e8429b9cc8f984d4895, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

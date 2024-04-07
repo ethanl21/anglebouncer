@@ -13,7 +13,7 @@ GameObject:
   m_Layer: 0
   m_Name: TransitionTemplate
   m_TagString: Untagged
-  m_Icon: {fileID: 2800000, guid: 0bacb113651e9e848b3e131f4e09b11e, type: 3}
+  m_Icon: {fileID: 2800000, guid: edfe2ebff17d2dd44b7d97485115ed8d, type: 3}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1

@@ -15,7 +15,7 @@ GameObject:
   m_Layer: 5
   m_Name: WipeOUT
   m_TagString: Untagged
-  m_Icon: {fileID: 2800000, guid: 3165fe12c08f5ae47974975e3f973f48, type: 3}
+  m_Icon: {fileID: 2800000, guid: f7e1c4566647f0b4791ef02fa9848637, type: 3}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -56,7 +56,7 @@ Animator:
   m_GameObject: {fileID: 4376996571985838007}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cdb18afd9618ad9438e20d7628b8f44b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 52e0450d85ab1964b94930b0a0f60dac, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

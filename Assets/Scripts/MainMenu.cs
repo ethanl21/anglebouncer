@@ -48,7 +48,6 @@ public class MainMenu : MonoBehaviour
         audioMixer.SetFloat("SEVolume", Mathf.Log10(seVol) * 20);
 
         musicManager.PlayMusic();
-
     }
 
     private void OnStartButtonClick(ClickEvent evt)

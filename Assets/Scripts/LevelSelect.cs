@@ -12,6 +12,7 @@ public class LevelSelect : MonoBehaviour
     private Button _level1btn;
     private Button _level2btn;
     private Button _level3btn;
+    private Button _mainMenuBtn;
 
     public TransitionSettings transitionSettings;
 
@@ -25,6 +26,7 @@ public class LevelSelect : MonoBehaviour
         _level1btn = _document.rootVisualElement.Q<Button>("level1Button");
         _level2btn = _document.rootVisualElement.Q<Button>("level2Button");
         _level3btn = _document.rootVisualElement.Q<Button>("level3Button");
+        _mainMenuBtn = _document.rootVisualElement.Q<Button>("mainMenuButton");
 
         // Add event handlers
         _level0btn.RegisterCallback((ClickEvent evt) =>
@@ -43,6 +45,14 @@ public class LevelSelect : MonoBehaviour
         {
             TransitionManager.Instance().Transition("Scenes/Levels/Level3", transitionSettings, 0f);
         });
+        _mainMenuBtn.RegisterCallback((ClickEvent evt) =>
+        {
+            TransitionManager.Instance().Transition("Scenes/MainMenu", transitionSettings, 0f);
+        });
+
+        _level1btn.SetEnabled(PlayerPrefs.GetFloat("level0cleared", 0) != 0);
+        _level2btn.SetEnabled(PlayerPrefs.GetFloat("level1cleared", 0) != 0);
+        _level3btn.SetEnabled(PlayerPrefs.GetFloat("level2cleared", 0) != 0);
     }
 
 

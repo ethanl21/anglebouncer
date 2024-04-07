@@ -15,7 +15,7 @@ GameObject:
   m_Layer: 5
   m_Name: WipeIN
   m_TagString: Untagged
-  m_Icon: {fileID: 2800000, guid: 3165fe12c08f5ae47974975e3f973f48, type: 3}
+  m_Icon: {fileID: 2800000, guid: f7e1c4566647f0b4791ef02fa9848637, type: 3}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -56,7 +56,7 @@ Animator:
   m_GameObject: {fileID: 2846249025423157759}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 40c5efe8909fa5d459c1fb016da3267d, type: 2}
+  m_Controller: {fileID: 9100000, guid: b1963507e93563b40a51cbacd5d9fcb2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

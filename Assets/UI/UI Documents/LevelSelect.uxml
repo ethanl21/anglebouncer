@@ -6,7 +6,10 @@
             <ui:Button text="Level 1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="level0Button" style="align-items: auto; justify-content: flex-start;" />
             <ui:Button text="Level 2" parse-escape-sequences="true" display-tooltip-when-elided="true" name="level1Button" style="align-items: auto; justify-content: flex-start;" />
             <ui:Button text="Level 3" parse-escape-sequences="true" display-tooltip-when-elided="true" name="level2Button" style="align-items: auto; justify-content: flex-start;" />
-            <ui:Button text="Level 4" parse-escape-sequences="true" display-tooltip-when-elided="true" name="level3Button" style="align-items: auto; justify-content: flex-start;" />
+            <ui:Button text="Level 4" parse-escape-sequences="true" display-tooltip-when-elided="true" name="level3Button" style="align-items: auto; justify-content: flex-start; display: none;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 0; flex-direction: row; justify-content: center; margin-bottom: 20px;">
+            <ui:Button text="Return to Main Menu" parse-escape-sequences="true" display-tooltip-when-elided="true" name="mainMenuButton" style="font-size: 36px; transition-duration: 0.1s;" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

@@ -24,9 +24,15 @@ public class GameScene : MonoBehaviour
 
     public Projectile projectile;
 
+    public Goal goal;
+
+    public Canvas levelCompleteCanvas;
+
     public int LevelNumber = 0;
     public bool NormalLineEnabled = true;
     public bool AltLineEnabled = true;
+
+
 
     void Start()
     {
@@ -35,6 +41,11 @@ public class GameScene : MonoBehaviour
 
         // Store projectile start position
         _projectileStartPos = projectile.transform.position;
+
+        goal.callback = (bool _) =>
+        {
+            levelCompleteCanvas.gameObject.SetActive(true);
+        };
 
         // Get references to UI components
         _undoBtn = _document.rootVisualElement.Q<Button>("undoButton");
@@ -110,10 +121,15 @@ public class GameScene : MonoBehaviour
         });
 
         // Init UI elements
-        _currentLevelLabel.text = "Level " + LevelNumber.ToString();
+        _currentLevelLabel.text = "Level " + LevelNumber + 1.ToString();
         _altLineBtn.visible = AltLineEnabled;
 
     }
 
-
+    public void OnLevelCompleteButton()
+    {
+        Debug.Log("level" + LevelNumber.ToString() + "cleared");
+        PlayerPrefs.SetFloat("level" + LevelNumber.ToString() + "cleared", 1f);
+        TransitionManager.Instance().Transition("Scenes/LevelSelect", transitionSettings, 0f);
+    }
 }

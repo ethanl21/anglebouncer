@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd0208933b0e3a443a9c1b5975c0fcb7, type: 3}
   m_Name: LinearWipe
   m_EditorClassIdentifier: 
-  multiplyColorMaterial: {fileID: 2100000, guid: e21bd070b47b0e2468749bce42986a46, type: 2}
-  addColorMaterial: {fileID: 2100000, guid: 024a9d330bda91949900cdff6a686e2a, type: 2}
+  multiplyColorMaterial: {fileID: 2100000, guid: 9fc431728d3a7214dac88cfd8ac5a7d4, type: 2}
+  addColorMaterial: {fileID: 2100000, guid: 15812ed2cc88a15449ae617a29074406, type: 2}
   refrenceResolution: {x: 1920, y: 1080}
   blockRaycasts: 1
   colorTintMode: 0
@@ -25,5 +25,5 @@ MonoBehaviour:
   flipY: 0
   transitionTime: 0.75
   destroyTime: 1.5
-  transitionIn: {fileID: 2846249025423157759, guid: 6028785798f61894881fd2c2dcbb2ce6, type: 3}
-  transitionOut: {fileID: 4376996571985838007, guid: ae2b221d49cf62a4eaab123c2102b50b, type: 3}
+  transitionIn: {fileID: 2846249025423157759, guid: f225895fbfc2a514fb76876dcc0e4a2a, type: 3}
+  transitionOut: {fileID: 4376996571985838007, guid: 4c797495daae1aa4b9004b2fdf85307d, type: 3}
