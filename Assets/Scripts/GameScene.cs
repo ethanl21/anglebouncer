@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using EasyTransition;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -28,6 +29,8 @@ public class GameScene : MonoBehaviour
 
     public Canvas levelCompleteCanvas;
 
+    public Goal boundary;
+
     public int LevelNumber = 0;
     public bool NormalLineEnabled = true;
     public bool AltLineEnabled = true;
@@ -45,6 +48,19 @@ public class GameScene : MonoBehaviour
         goal.callback = (bool _) =>
         {
             levelCompleteCanvas.gameObject.SetActive(true);
+        };
+
+        boundary.callback = (bool _) =>
+        {
+            lineGenerator.DeleteAllLines();
+
+            var rb = projectile.GetComponent<Rigidbody2D>();
+
+            rb.isKinematic = true;
+            rb.velocity = Vector2.zero;
+            rb.angularVelocity = 0f;
+
+            projectile.transform.position = _projectileStartPos;
         };
 
         // Get references to UI components
