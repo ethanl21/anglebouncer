@@ -137,7 +137,7 @@ public class GameScene : MonoBehaviour
         });
 
         // Init UI elements
-        _currentLevelLabel.text = "Level " + LevelNumber + 1.ToString();
+        _currentLevelLabel.text = "Level " + (LevelNumber + 1).ToString();
         _altLineBtn.visible = AltLineEnabled;
 
     }
