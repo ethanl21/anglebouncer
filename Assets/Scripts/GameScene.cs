@@ -52,6 +52,8 @@ public class GameScene : MonoBehaviour
 
         boundary.callback = (bool _) =>
         {
+            Debug.Log("Boundary Triggered");
+            
             lineGenerator.DeleteAllLines();
 
             var rb = projectile.GetComponent<Rigidbody2D>();

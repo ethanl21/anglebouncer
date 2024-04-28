@@ -9,7 +9,10 @@ public class Goal : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        callback(true);
+        if (collision.CompareTag("PlayerBall"))
+        {
+            callback(true);
+        }
     }
 
 
