@@ -10,6 +10,12 @@ public class AltLine : MonoBehaviour, ILine
     public float addedVelocity = 5.0f;
 
     private List<Vector2> _points;
+    private AudioSource audioSource;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     public void UpdateLine(Vector2 position)
     {
@@ -45,17 +51,11 @@ public class AltLine : MonoBehaviour, ILine
             var rb = collision.collider.GetComponent<Rigidbody2D>();
             if (rb != null)
             {
-                // Calculate the direction of the bounce
-                Vector2 bounceDirection = collision.contacts[0].normal;
-                
-                if (Vector2.Dot(bounceDirection, rb.velocity)  > 0.5)
+                if (collision.relativeVelocity.magnitude >= 0.5)
                 {
-                    // Calculate the added velocity in the direction of the bounce
-                    Vector2 addedVelocityVector = bounceDirection * addedVelocity;
-
-                    // Add the added velocity to the colliding object's velocity
-                    rb.velocity += addedVelocityVector;
+                    audioSource.Play();
                 }
+                
 
                 
             }
