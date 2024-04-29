@@ -40,10 +40,10 @@ public class AltLine : MonoBehaviour, ILine
 
         edgeCollider.points = _points.ToArray();
     }
-    
+
     void OnCollisionEnter2D(Collision2D collision)
     {
-        
+
         if (collision.collider.CompareTag("PlayerBall"))
         {
             Debug.Log("Player collided with line");
@@ -55,11 +55,11 @@ public class AltLine : MonoBehaviour, ILine
                 {
                     audioSource.Play();
                 }
-                
 
-                
+
+
             }
         }
-        
+
     }
 }

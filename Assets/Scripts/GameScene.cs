@@ -19,6 +19,8 @@ public class GameScene : MonoBehaviour
 
     private Vector2 _projectileStartPos;
 
+    private AudioSource _loseSfx;
+
     public TransitionSettings transitionSettings;
 
     public LineGenerator lineGenerator;
@@ -27,9 +29,11 @@ public class GameScene : MonoBehaviour
 
     public Goal goal;
 
-    public Canvas levelCompleteCanvas;
+    // public Canvas levelCompleteCanvas;
 
     public Goal boundary;
+
+    public LevelOverCanvas levelOverCanvas;
 
     public int LevelNumber = 0;
     public bool NormalLineEnabled = true;
@@ -45,15 +49,20 @@ public class GameScene : MonoBehaviour
         // Store projectile start position
         _projectileStartPos = projectile.transform.position;
 
+        _loseSfx = GetComponent<AudioSource>();
+
         goal.callback = (bool _) =>
         {
-            levelCompleteCanvas.gameObject.SetActive(true);
+            levelOverCanvas.ShowWinPanel();
         };
 
         boundary.callback = (bool _) =>
         {
             Debug.Log("Boundary Triggered");
-            
+            _loseSfx.Play();
+
+            levelOverCanvas.ShowLosePanel();
+
             lineGenerator.DeleteAllLines();
 
             var rb = projectile.GetComponent<Rigidbody2D>();
@@ -149,5 +158,24 @@ public class GameScene : MonoBehaviour
         Debug.Log("level" + LevelNumber.ToString() + "cleared");
         PlayerPrefs.SetFloat("level" + LevelNumber.ToString() + "cleared", 1f);
         TransitionManager.Instance().Transition("Scenes/LevelSelect", transitionSettings, 0f);
+    }
+
+    public void OnRestartLostLevelButton()
+    {
+        levelOverCanvas.HidePanels();
+        lineGenerator.DeleteAllLines();
+
+        var rb = projectile.GetComponent<Rigidbody2D>();
+
+        rb.isKinematic = true;
+        rb.velocity = Vector2.zero;
+        rb.angularVelocity = 0f;
+
+        projectile.transform.position = _projectileStartPos;
+    }
+
+    public void OnMainMenuLostLevelButton()
+    {
+        TransitionManager.Instance().Transition("Scenes/MainMenu", transitionSettings, 0f);
     }
 }
