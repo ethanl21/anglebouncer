@@ -219,4 +219,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lineRenderer: {fileID: 2875710952230892269}
   edgeCollider: {fileID: 331636054210108643}
-  addedVelocity: 10
+  addedVelocity: 5
