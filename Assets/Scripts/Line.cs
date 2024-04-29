@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public class Line : MonoBehaviour
+public class Line : MonoBehaviour, ILine
 {
     public LineRenderer lineRenderer;
     public EdgeCollider2D edgeCollider;
@@ -21,7 +21,7 @@ public class Line : MonoBehaviour
         }
     }
 
-    void SetPoint(Vector2 point) {
+    public void SetPoint(Vector2 point) {
         points.Add(point);
 
         lineRenderer.positionCount = points.Count;
