@@ -19,8 +19,6 @@ public class GameScene : MonoBehaviour
 
     private Vector2 _projectileStartPos;
 
-    private AudioSource _loseSfx;
-
     public TransitionSettings transitionSettings;
 
     public LineGenerator lineGenerator;
@@ -49,8 +47,6 @@ public class GameScene : MonoBehaviour
         // Store projectile start position
         _projectileStartPos = projectile.transform.position;
 
-        _loseSfx = GetComponent<AudioSource>();
-
         goal.callback = (bool _) =>
         {
             levelOverCanvas.ShowWinPanel();
@@ -59,7 +55,6 @@ public class GameScene : MonoBehaviour
         boundary.callback = (bool _) =>
         {
             Debug.Log("Boundary Triggered");
-            _loseSfx.Play();
 
             levelOverCanvas.ShowLosePanel();
 
