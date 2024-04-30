@@ -11,6 +11,8 @@ public class OptionsMenu : MonoBehaviour
     private Button _saveChangesBtn;
     private Button _discardChangesBtn;
 
+    private Button _resetSavedataBtn;
+
     private Slider _bgmSlider;
     private Slider _seSlider;
 
@@ -26,6 +28,7 @@ public class OptionsMenu : MonoBehaviour
         // Get references to UI components
         _saveChangesBtn = _document.rootVisualElement.Q<Button>("saveChangesButton");
         _discardChangesBtn = _document.rootVisualElement.Q<Button>("discardChangesButton");
+        _resetSavedataBtn = _document.rootVisualElement.Q<Button>("resetProgressButton");
 
         _bgmSlider = _document.rootVisualElement.Q<Slider>("bgmSlider");
         _seSlider = _document.rootVisualElement.Q<Slider>("seSlider");
@@ -33,6 +36,17 @@ public class OptionsMenu : MonoBehaviour
         // Add event handlers
         _saveChangesBtn.RegisterCallback<ClickEvent>(OnSaveChangesButtonClicked);
         _discardChangesBtn.RegisterCallback<ClickEvent>(OnDiscardChangesButtonClicked);
+
+        _resetSavedataBtn.RegisterCallback<ClickEvent>((ClickEvent _) =>
+        {
+            PlayerPrefs.DeleteAll();
+
+            _bgmSlider.value = 1f;
+            PlayerPrefs.SetFloat("BgmVol", Mathf.Pow(10, 1 / 20));
+
+            _seSlider.value = 1f;
+            PlayerPrefs.SetFloat("SeVol", Mathf.Pow(10, 1 / 20));
+        });
 
         _bgmSlider.RegisterValueChangedCallback(v =>
         {
@@ -70,7 +84,7 @@ public class OptionsMenu : MonoBehaviour
     {
         PlayerPrefs.SetFloat("BgmVol", _bgmSlider.value);
         PlayerPrefs.SetFloat("SeVol", _seSlider.value);
-        
+
         TransitionManager.Instance().Transition("Scenes/MainMenu", transitionSettings, 0f);
     }
 

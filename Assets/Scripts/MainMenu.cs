@@ -53,8 +53,8 @@ public class MainMenu : MonoBehaviour
     private void OnStartButtonClick(ClickEvent evt)
     {
         Debug.Log("Clicked start button");
-        TransitionManager.Instance().Transition("Scenes/LevelSelect", transitionSettings, 0f);
         musicManager.StopMusic();
+        TransitionManager.Instance().Transition("Scenes/LevelSelect", transitionSettings, 0f);
     }
 
     private void OnOptionsButtonClick(ClickEvent evt)
