@@ -1,6 +1,6 @@
 #levelSelectContainer Button {
     width: 200px;
-    height: 200px;
+    height: 150px;
     font-size: 48px;
     -unity-font-style: bold;
     border-top-left-radius: 15px;
@@ -8,8 +8,8 @@
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
     transition-duration: 0.1s;
-    margin-right: 20px;
-    margin-left: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 #levelSelectContainer Button:hover {

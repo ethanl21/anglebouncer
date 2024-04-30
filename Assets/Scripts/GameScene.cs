@@ -50,6 +50,11 @@ public class GameScene : MonoBehaviour
         goal.callback = (bool _) =>
         {
             levelOverCanvas.ShowWinPanel();
+            var rb = projectile.GetComponent<Rigidbody2D>();
+
+            rb.isKinematic = true;
+            rb.velocity = Vector2.zero;
+            rb.angularVelocity = 0f;
         };
 
         boundary.callback = (bool _) =>
@@ -145,6 +150,7 @@ public class GameScene : MonoBehaviour
         // Init UI elements
         _currentLevelLabel.text = "Level " + (LevelNumber + 1).ToString();
         _altLineBtn.visible = AltLineEnabled;
+        _normalLineBtn.visible = NormalLineEnabled;
 
     }
 

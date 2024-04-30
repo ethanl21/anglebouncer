@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using EasyTransition;
 using UnityEngine;
 using UnityEngine.Audio;
@@ -14,8 +12,6 @@ public class MainMenu : MonoBehaviour
     private Button _quitBtn;
 
     public TransitionSettings transitionSettings;
-
-    public MusicManager musicManager;
 
     public AudioMixer audioMixer;
 
@@ -46,14 +42,11 @@ public class MainMenu : MonoBehaviour
 
         audioMixer.SetFloat("BGMVolume", Mathf.Log10(bgmVol) * 20);
         audioMixer.SetFloat("SEVolume", Mathf.Log10(seVol) * 20);
-
-        musicManager.PlayMusic();
     }
 
     private void OnStartButtonClick(ClickEvent evt)
     {
         Debug.Log("Clicked start button");
-        musicManager.StopMusic();
         TransitionManager.Instance().Transition("Scenes/LevelSelect", transitionSettings, 0f);
     }
 
