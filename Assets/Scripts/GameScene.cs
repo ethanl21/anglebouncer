@@ -27,9 +27,11 @@ public class GameScene : MonoBehaviour
 
     public Goal goal;
 
-    public Canvas levelCompleteCanvas;
+    // public Canvas levelCompleteCanvas;
 
     public Goal boundary;
+
+    public LevelOverCanvas levelOverCanvas;
 
     public int LevelNumber = 0;
     public bool NormalLineEnabled = true;
@@ -47,11 +49,20 @@ public class GameScene : MonoBehaviour
 
         goal.callback = (bool _) =>
         {
-            levelCompleteCanvas.gameObject.SetActive(true);
+            levelOverCanvas.ShowWinPanel();
+            var rb = projectile.GetComponent<Rigidbody2D>();
+
+            rb.isKinematic = true;
+            rb.velocity = Vector2.zero;
+            rb.angularVelocity = 0f;
         };
 
         boundary.callback = (bool _) =>
         {
+            Debug.Log("Boundary Triggered");
+
+            levelOverCanvas.ShowLosePanel();
+
             lineGenerator.DeleteAllLines();
 
             var rb = projectile.GetComponent<Rigidbody2D>();
@@ -137,8 +148,9 @@ public class GameScene : MonoBehaviour
         });
 
         // Init UI elements
-        _currentLevelLabel.text = "Level " + LevelNumber + 1.ToString();
+        _currentLevelLabel.text = "Level " + (LevelNumber + 1).ToString();
         _altLineBtn.visible = AltLineEnabled;
+        _normalLineBtn.visible = NormalLineEnabled;
 
     }
 
@@ -147,5 +159,24 @@ public class GameScene : MonoBehaviour
         Debug.Log("level" + LevelNumber.ToString() + "cleared");
         PlayerPrefs.SetFloat("level" + LevelNumber.ToString() + "cleared", 1f);
         TransitionManager.Instance().Transition("Scenes/LevelSelect", transitionSettings, 0f);
+    }
+
+    public void OnRestartLostLevelButton()
+    {
+        levelOverCanvas.HidePanels();
+        lineGenerator.DeleteAllLines();
+
+        var rb = projectile.GetComponent<Rigidbody2D>();
+
+        rb.isKinematic = true;
+        rb.velocity = Vector2.zero;
+        rb.angularVelocity = 0f;
+
+        projectile.transform.position = _projectileStartPos;
+    }
+
+    public void OnMainMenuLostLevelButton()
+    {
+        TransitionManager.Instance().Transition("Scenes/MainMenu", transitionSettings, 0f);
     }
 }

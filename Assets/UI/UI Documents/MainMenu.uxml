@@ -2,7 +2,7 @@
     <Style src="project://database/Assets/UI/UI%20Documents/MainMenu.uss?fileID=7433441132597879392&amp;guid=dd7eee12fd2504a4db6c481125d0a4fe&amp;type=3#MainMenu" />
     <ui:VisualElement name="outerContainer" style="flex-grow: 1; background-image: url(&apos;project://database/Assets/UI/BG/lined_paper-min.png?fileID=2800000&amp;guid=41df2ba106781764eab72d70c2ec3b74&amp;type=3#lined_paper-min&apos;);">
         <ui:VisualElement name="topContainer" style="flex-grow: 1; align-items: center; justify-content: center; flex-shrink: 1;">
-            <ui:Label tabindex="-1" text="scribblebounce" parse-escape-sequences="true" display-tooltip-when-elided="true" name="titleLabel" style="font-size: 48px;" />
+            <ui:Label tabindex="-1" text="Scribble Bounce" parse-escape-sequences="true" display-tooltip-when-elided="true" name="titleLabel" style="font-size: 48px; -unity-font-style: bold; -unity-text-outline-width: 3px; -unity-text-outline-color: rgb(186, 236, 255);" />
             <ui:Label tabindex="-1" text="by Ethan Lew" parse-escape-sequences="true" display-tooltip-when-elided="true" name="subtitleLabel" />
         </ui:VisualElement>
         <ui:VisualElement name="bottomContainer" style="flex-grow: 1; flex-shrink: 1; justify-content: center; align-items: center;">

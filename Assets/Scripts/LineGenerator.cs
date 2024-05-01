@@ -7,7 +7,7 @@ public class LineGenerator : MonoBehaviour
     public GameObject linePrefab;
     public GameObject altLinePrefab;
 
-    Line activeLine;
+    ILine activeLine;
 
     Stack<GameObject> lineStack;
 
@@ -38,7 +38,7 @@ public class LineGenerator : MonoBehaviour
 
             lineStack.Push(newLine);
 
-            activeLine = newLine.GetComponent<Line>();
+            activeLine = newLine.GetComponent<ILine>();
         }
 
         if (Input.GetMouseButtonUp(0))
