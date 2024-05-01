@@ -49,7 +49,7 @@ public class LevelSelect : MonoBehaviour
         });
         _level5btn.RegisterCallback((ClickEvent evt) =>
         {
-            TransitionManager.Instance().Transition("Scenes/Level/Level3", transitionSettings, 0f);
+            TransitionManager.Instance().Transition("Scenes/Level/Level4", transitionSettings, 0f);
         });
         _mainMenuBtn.RegisterCallback((ClickEvent evt) =>
         {
